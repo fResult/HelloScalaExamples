@@ -1,4 +1,6 @@
 # sbt
+.bloop/
+.metals/
 # (note: may want to keep parts of 'project')
 bin/
 project/project/
