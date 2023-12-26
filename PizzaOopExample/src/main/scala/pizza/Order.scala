@@ -4,7 +4,7 @@ import scala.collection.mutable.ArrayBuffer
 
 class Order(
   val pizzas: ArrayBuffer[Pizza],
-  var customer: Customer
+  val customer: Customer
 ) {
 
   def addPizza(p: Pizza): Unit = {
@@ -23,9 +23,7 @@ class Order(
   def getTotalPrice(): Int = ???
 
   def printOrder(): Unit = {
-    for (p <- pizzas) {
-      println(p)
-    }
+    for (p <- pizzas) println(p)
   }
 
 }

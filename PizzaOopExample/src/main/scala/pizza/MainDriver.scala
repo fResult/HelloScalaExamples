@@ -16,7 +16,7 @@ object MainDriver extends App {
   //     ArrayBuffer(Cheese, Pepperoni, Sausage)
   // )
 
-  val address = new Address(
+  val address = Address(
     "123 Main Street",
     "Apt. 1",
     "Talkeetna",
@@ -24,7 +24,7 @@ object MainDriver extends App {
     "99676"
   )
 
-  val customer = new Customer(
+  val customer = Customer(
     "Alvin Alexander",
     "907-555-1212",
     address
@@ -35,13 +35,13 @@ object MainDriver extends App {
     customer
   )
 
-  order.addPizza(
-    new Pizza(
-      SmallCrustSize,
-      ThinCrustType,
-      ArrayBuffer(Cheese, Mushrooms)
-    )
-  )
+//  order.addPizza(
+//    new Pizza(
+//      SmallCrustSize,
+//      ThinCrustType,
+//      ArrayBuffer(Cheese, Mushrooms)
+//    )
+//  )
 
   // print the order
   order.printOrder()
