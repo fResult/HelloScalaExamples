@@ -1,16 +1,14 @@
 package pizza
 
-import scala.collection.mutable.ArrayBuffer
-
 object MainDriver extends App {
 
-  val p1 = new Pizza(
+  val p1 = Pizza(
     MediumCrustSize,
     ThinCrustType,
-    ArrayBuffer(Cheese)
+    List(Cheese)
   )
 
-  // val p2 = new Pizza (
+  // val p2 = Pizza (
   //     LargeCrustSize,
   //     ThinCrustType,
   //     ArrayBuffer(Cheese, Pepperoni, Sausage)
@@ -30,13 +28,13 @@ object MainDriver extends App {
     address
   )
 
-  val order = new Order(
-    ArrayBuffer(p1 /*, p2*/),
+  val order = Order(
+    List(p1 /*, p2*/),
     customer
   )
 
 //  order.addPizza(
-//    new Pizza(
+//    Pizza(
 //      SmallCrustSize,
 //      ThinCrustType,
 //      ArrayBuffer(Cheese, Mushrooms)
