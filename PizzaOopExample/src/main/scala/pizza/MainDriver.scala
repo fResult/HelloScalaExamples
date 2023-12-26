@@ -10,11 +10,11 @@ object MainDriver extends App {
         ArrayBuffer(Cheese)
     )
 
-    val p2 = new Pizza (
-        LargeCrustSize,
-        ThinCrustType,
-        ArrayBuffer(Cheese, Pepperoni, Sausage)
-    )
+    // val p2 = new Pizza (
+    //     LargeCrustSize,
+    //     ThinCrustType,
+    //     ArrayBuffer(Cheese, Pepperoni, Sausage)
+    // )
 
     val address = new Address (
         "123 Main Street",
@@ -30,12 +30,12 @@ object MainDriver extends App {
         address
     )
 
-    val o = new Order(
-        ArrayBuffer(p1, p2),
+    val order = new Order(
+        ArrayBuffer(p1/*, p2*/),
         customer
     )
 
-    o.addPizza(
+    order.addPizza(
         new Pizza (
             SmallCrustSize,
             ThinCrustType,
@@ -44,7 +44,7 @@ object MainDriver extends App {
     )
 
     // print the order
-    o.printOrder
+    order.printOrder()
 
 }
 
