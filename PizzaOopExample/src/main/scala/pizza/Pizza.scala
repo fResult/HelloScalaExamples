@@ -17,7 +17,7 @@ case class Pizza(
     s"""Pizza:
        |  Crust Size: $crustSize
        |  Crust Type: $crustType
-       |  $toppingsString
+       |  Toppings:   $toppingsString
      """.stripMargin
   }
 
@@ -25,4 +25,9 @@ case class Pizza(
     toppingsPrices: Map[Topping, Double],
     crustSizePrices: Map[CrustSize, Double],
     crustTypePrices: Map[CrustType, Double]
-  ): Int = ???
+  ): Double = {
+    val toppingsPrice = toppingsPrices.view.filterKeys(toppings.toSet).values.sum
+    val crustTypePrice = crustTypePrices(crustType)
+    val crustSizePrice = crustSizePrices(crustSize)
+    toppingsPrice + crustTypePrice + crustSizePrice
+  }
