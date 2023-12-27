@@ -4,8 +4,7 @@ case class Pizza(
   val crustSize: CrustSize,
   val crustType: CrustType,
   val toppings: List[Topping]
-) {
-
+):
   def addTopping(t: Topping): Pizza = copy(toppings = t +: toppings)
 
   def removeTopping(t: Topping): Pizza = copy(toppings = toppings.filter(_ != t))
@@ -27,6 +26,3 @@ case class Pizza(
     crustSizePrices: Map[CrustSize, Int],
     crustTypePrices: Map[CrustType, Int]
   ): Int = ???
-}
-
-
