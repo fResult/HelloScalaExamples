@@ -5,7 +5,7 @@ object MainDriver extends App {
   val p1 = Pizza(
     MediumCrustSize,
     ThinCrustType,
-    List(Cheese)
+    List(Topping.Cheese)
   )
 
   // val p2 = Pizza (

@@ -22,7 +22,7 @@ case class Pizza(
   }
 
   def getPrice(
-    toppingsPrices: Map[Topping, Int],
-    crustSizePrices: Map[CrustSize, Int],
-    crustTypePrices: Map[CrustType, Int]
+    toppingsPrices: Map[Topping, Double],
+    crustSizePrices: Map[CrustSize, Double],
+    crustTypePrices: Map[CrustType, Double]
   ): Int = ???
