@@ -25,8 +25,7 @@ case class Order(
   def printOrder(): Unit = {
     pizzas.foreach(println)
     println(
-      s"""
-         | Price:
+      s"""| Price:
          |   Base Price: $getBasePrice
          |   Tax: $getTaxes
          |   Net Price: $getTotalPrice
